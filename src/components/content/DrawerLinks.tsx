@@ -16,13 +16,10 @@ type Props = { refs: RefsProps };
 export default function DrawerLinks({ refs }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Función que abre el Drawer
   const handleOpen = () => setIsOpen(true);
 
-  // Función que cierra el Drawer
   const handleClose = () => setIsOpen(false);
 
-  // Función que pasa a LinksBody: scroll + cerrar Drawer
   const handleScrollAndClose = (
     ref: React.RefObject<HTMLDivElement | null>
   ) => {
@@ -34,7 +31,7 @@ export default function DrawerLinks({ refs }: Props) {
     <Drawer.Root
       placement="start"
       open={isOpen}
-      onOpenChange={(open) => setIsOpen(open)}
+      onOpenChange={(details) => setIsOpen(details.open)}
       closeOnInteractOutside
     >
       <Drawer.Trigger asChild>
@@ -57,11 +54,7 @@ export default function DrawerLinks({ refs }: Props) {
 
             <Drawer.Body>
               <VStack gap={0} align="start">
-                {/* Pasamos handleScrollAndClose como prop */}
-                <LinksBody
-                  refs={refs}
-                  onScrollClick={handleScrollAndClose} // ✅ nueva prop
-                />
+                <LinksBody refs={refs} onScrollClick={handleScrollAndClose} />
               </VStack>
             </Drawer.Body>
 
