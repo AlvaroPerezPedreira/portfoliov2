@@ -10,6 +10,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import LinksBody from "../links/LinksBody";
 import { RefsProps } from "../links/types";
 import { useState } from "react";
+import NavbarIcons from "../navbar/NavbarIcons";
 
 type Props = { refs: RefsProps };
 
@@ -57,7 +58,9 @@ export default function DrawerLinks({ refs }: Props) {
                 <LinksBody refs={refs} onScrollClick={handleScrollAndClose} />
               </VStack>
             </Drawer.Body>
-
+            <Drawer.Footer justifyContent="center" mb="4">
+              <NavbarIcons />
+            </Drawer.Footer>
             <Drawer.CloseTrigger asChild>
               <CloseButton size="sm" />
             </Drawer.CloseTrigger>
