@@ -5,7 +5,7 @@ import Profile from "./components/content/Profile";
 import Contact from "./components/contact/Contact";
 import Content from "./components/content/Content";
 import CoreSkills from "./components/content/CoreSkills";
-import Links from "./components/content/Links";
+import Links from "./components/links/Links";
 import { useRef } from "react";
 import { useMediaQuery } from "@chakra-ui/react";
 
@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <Box w="100%" h="8vh">
-        <Navbar />
+        <Navbar refs={refs} />
       </Box>
       <Separator />
       <HStack w="100%" gap={0} minH="92vh" alignItems="stretch">

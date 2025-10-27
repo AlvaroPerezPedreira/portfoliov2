@@ -8,7 +8,7 @@ import {
   Licenses,
   Certs,
 } from "./index";
-import { RefsProps } from "./Links";
+import { RefsProps } from "../links/Links";
 import Projects from "../projects/Projects";
 
 export default function Content({ refs }: { refs: RefsProps }) {
