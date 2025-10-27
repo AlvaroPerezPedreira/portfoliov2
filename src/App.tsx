@@ -1,5 +1,5 @@
 import "./App.css";
-import { Box, HStack, Separator } from "@chakra-ui/react";
+import { Box, HStack, Separator, VStack } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
 import Profile from "./components/content/Profile";
 import Contact from "./components/contact/Contact";
@@ -7,6 +7,7 @@ import Content from "./components/content/Content";
 import CoreSkills from "./components/content/CoreSkills";
 import Links from "./components/content/Links";
 import { useRef } from "react";
+import { useMediaQuery } from "@chakra-ui/react";
 
 function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -29,6 +30,9 @@ function App() {
     projectsRef,
   };
 
+  const [rightColumn] = useMediaQuery(["(max-width: 1030px)"]);
+  const [leftColumn] = useMediaQuery(["(max-width: 730px)"]);
+
   return (
     <>
       <Box w="100%" h="8vh">
@@ -36,23 +40,40 @@ function App() {
       </Box>
       <Separator />
       <HStack w="100%" gap={0} minH="92vh" alignItems="stretch">
-        <Box p={8} h="92vh" w="30%" position="sticky" top="0">
-          <Box w="50%" justifySelf="right">
-            <Profile />
-            <Links refs={refs} />
+        {!leftColumn && (
+          <Box p={8} h="92vh" w="30%" position="sticky" top="0">
+            <Box justifySelf="right">
+              <Profile />
+              <Links refs={refs} />
+            </Box>
           </Box>
+        )}
+        {!leftColumn && <Separator orientation="vertical" />}
+        <Box
+          px="16"
+          py="8"
+          maxWidth={!leftColumn ? "100%" : "700px"}
+          w={!leftColumn && !rightColumn ? "40%" : "100%"}
+        >
+          <VStack gap={4} alignItems="left">
+            <Content refs={refs} />
+            {rightColumn && (
+              <>
+                <CoreSkills />
+                <Contact />
+              </>
+            )}
+          </VStack>
         </Box>
-        <Separator orientation="vertical" />
-        <Box px="16" py="8" w="40%" minWidth="500px" maxWidth="700px">
-          <Content refs={refs} />
-        </Box>
-        <Separator orientation="vertical" />
-        <Box p={8} h="92vh" w="30%" position="sticky" top="0">
-          <Box w="50%" justifySelf="left">
-            <Contact />
-            <CoreSkills />
+        {!rightColumn && <Separator orientation="vertical" />}
+        {!rightColumn && (
+          <Box p={8} h="92vh" w="30%" position="sticky" top="0">
+            <Box justifySelf="left">
+              <Contact />
+              <CoreSkills />
+            </Box>
           </Box>
-        </Box>
+        )}
       </HStack>
     </>
   );

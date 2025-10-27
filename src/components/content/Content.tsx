@@ -1,4 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import {
   Experience,
   About,
@@ -13,7 +13,7 @@ import Projects from "../projects/Projects";
 
 export default function Content({ refs }: { refs: RefsProps }) {
   return (
-    <VStack gap={4} alignItems="left">
+    <>
       <Box ref={refs.aboutRef}>
         <About />
       </Box>
@@ -38,6 +38,6 @@ export default function Content({ refs }: { refs: RefsProps }) {
       <Box ref={refs.certsRef}>
         <Certs />
       </Box>
-    </VStack>
+    </>
   );
 }
