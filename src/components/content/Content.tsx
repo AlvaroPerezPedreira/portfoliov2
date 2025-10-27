@@ -8,8 +8,8 @@ import {
   Licenses,
   Certs,
 } from "./index";
-import { RefsProps } from "../links/Links";
 import Projects from "../projects/Projects";
+import { RefsProps } from "../links/types";
 
 export default function Content({ refs }: { refs: RefsProps }) {
   return (
