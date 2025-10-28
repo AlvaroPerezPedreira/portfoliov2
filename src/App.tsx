@@ -1,4 +1,3 @@
-import "./App.css";
 import { Box, HStack, Separator, VStack } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
 import Profile from "./components/content/Profile";
