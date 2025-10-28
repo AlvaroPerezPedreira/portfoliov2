@@ -75,7 +75,10 @@ export default function Certs() {
             Udemy
           </Accordion.ItemTrigger>
           <Accordion.ItemContent pl="4" mb="2">
-            <Text>- Vue</Text>
+            <Text>
+              - Vue: The complete Guide (incl. Router & Composition API)
+            </Text>
+            <Text>- Spring Boot 3 Spring 6 & Hibernate for Beginners</Text>
           </Accordion.ItemContent>
         </Accordion.Item>
 
