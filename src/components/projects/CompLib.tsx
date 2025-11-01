@@ -24,7 +24,7 @@ export default function CompLib() {
           <FaExternalLinkAlt />
         </IconButton>
       </HStack>
-      <HStack pl="4" my="2">
+      <HStack pl="4" my="2" flexWrap="wrap">
         <Tag.Root variant="solid" size="lg" fontWeight="bold">
           <Tag.Label>React</Tag.Label>
         </Tag.Root>
@@ -38,7 +38,7 @@ export default function CompLib() {
           <Tag.Label>CSS</Tag.Label>
         </Tag.Root>
       </HStack>
-      <Text pl="4" mb="4">
+      <Text pl="4" mb="4" textAlign="justify">
         Proyecto personal que ofrece una librería de componentes reutilizables,
         modernos y accesibles. Está diseñada aplicando principios de
         arquitectura modular y escalable para facilitar la construcción de

@@ -46,10 +46,8 @@ export default function DrawerLinks({ refs }: Props) {
         <Drawer.Positioner>
           <Drawer.Content>
             <Drawer.Header>
-              <Drawer.Title>
-                <Heading mb="4" textStyle="2xl" color="blue.500">
-                  Contenido
-                </Heading>
+              <Drawer.Title mb="4" textStyle="2xl" color="blue.500">
+                Contenido
               </Drawer.Title>
             </Drawer.Header>
 

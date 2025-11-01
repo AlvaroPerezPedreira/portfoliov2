@@ -15,7 +15,7 @@ export default function Projects() {
       <Heading mb="2" textStyle="2xl" color="blue.500">
         Proyectos
       </Heading>
-      <Text mb="4">
+      <Text mb="4" textAlign="justify">
         Proyectos que he creado mientras aprendía y exploraba nuevas
         tecnologías.
       </Text>

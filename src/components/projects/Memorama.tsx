@@ -20,7 +20,7 @@ export default function Memorama() {
           <FaExternalLinkAlt />
         </IconButton>
       </HStack>
-      <HStack pl="4" my="2">
+      <HStack pl="4" my="2" flexWrap="wrap">
         <Tag.Root variant="solid" size="lg" fontWeight="bold">
           <Tag.Label>React</Tag.Label>
         </Tag.Root>
@@ -34,7 +34,7 @@ export default function Memorama() {
           <Tag.Label>CSS</Tag.Label>
         </Tag.Root>
       </HStack>
-      <Text pl="4" mb="4">
+      <Text pl="4" mb="4" textAlign="justify">
         Memorama consiste en un conjunto de cartas distribuidas boca abajo,
         donde el usuario debe emparejar cartas iguales de manera estratégica y
         rápida.

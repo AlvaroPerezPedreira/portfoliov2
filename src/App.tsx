@@ -38,7 +38,13 @@ function App() {
         <Navbar refs={refs} />
       </Box>
       <Separator />
-      <HStack w="100%" gap={0} minH="92vh" alignItems="stretch">
+      <HStack
+        w="100%"
+        gap={0}
+        minH="92vh"
+        alignItems="stretch"
+        overflow="hidden"
+      >
         {!leftColumn && (
           <Box p={8} h="92vh" w="30%" position="sticky" top="0">
             <Box justifySelf="right">

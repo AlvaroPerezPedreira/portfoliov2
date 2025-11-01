@@ -20,7 +20,7 @@ export default function Photogram() {
           <FaExternalLinkAlt />
         </IconButton>
       </HStack>
-      <HStack pl="4" my="2">
+      <HStack pl="4" my="2" flexWrap="wrap">
         <Tag.Root variant="solid" size="lg" fontWeight="bold">
           <Tag.Label>C#</Tag.Label>
         </Tag.Root>
@@ -31,7 +31,7 @@ export default function Photogram() {
           <Tag.Label>HTML</Tag.Label>
         </Tag.Root>
       </HStack>
-      <Text pl="4">
+      <Text pl="4" textAlign="justify">
         Photogram es una aplicación web desarrollada en C# y ASP.NET que permite
         a los usuarios subir imágenes y categorizarlas mediante etiquetas.
         Ofrece funcionalidades como la gestión de imágenes, la búsqueda por
