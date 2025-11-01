@@ -3,7 +3,6 @@ import {
   CloseButton,
   Drawer,
   Portal,
-  Heading,
   VStack,
 } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
