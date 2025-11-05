@@ -78,6 +78,7 @@ export default function Certs() {
             <Text>
               - Vue: The complete Guide (incl. Router & Composition API)
             </Text>
+            <Text>- Vue.js 3 Masterclass: Build 7 Real-World Apps</Text>
             <Text>- Spring Boot 3 Spring 6 & Hibernate for Beginners</Text>
           </Accordion.ItemContent>
         </Accordion.Item>
