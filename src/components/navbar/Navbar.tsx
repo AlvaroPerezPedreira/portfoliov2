@@ -44,7 +44,22 @@ export default function Navbar({ refs }: Props) {
       </Box>
       {!rightColumn && (
         <Box w="40%" textAlign="center">
-          <Heading textStyle="xl">Open to work</Heading>
+          <Box
+            as="span"
+            position="relative"
+            w="100%"
+            _after={{
+              content: '""',
+              position: "absolute",
+              left: "-20%",
+              bottom: "40%",
+              width: "40%",
+              borderBottom: "2px solid",
+              opacity: 0.5,
+            }}
+          >
+            <Heading textStyle="xl">Open to work</Heading>
+          </Box>
         </Box>
       )}
       {!leftColumn && (

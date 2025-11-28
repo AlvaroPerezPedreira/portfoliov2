@@ -22,6 +22,16 @@ export default function Languages() {
           <RatingGroup.Label width="100px">Inglés</RatingGroup.Label>
           <RatingGroup.Control />
         </RatingGroup.Root>
+        <RatingGroup.Root count={5} value={2} size="md" gap="4" disabled>
+          <RatingGroup.HiddenInput />
+          <RatingGroup.Label width="100px">Francés</RatingGroup.Label>
+          <RatingGroup.Control />
+        </RatingGroup.Root>
+        <RatingGroup.Root count={5} value={1} size="md" gap="4" disabled>
+          <RatingGroup.HiddenInput />
+          <RatingGroup.Label width="100px">Alemán</RatingGroup.Label>
+          <RatingGroup.Control />
+        </RatingGroup.Root>
       </Stack>
     </>
   );

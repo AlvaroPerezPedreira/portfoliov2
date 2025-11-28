@@ -12,6 +12,7 @@ import {
   FaFilePowerpoint,
   FaGoogleDrive,
   FaFigma,
+  FaConfluence,
 } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { FiDatabase } from "react-icons/fi";
@@ -23,8 +24,12 @@ import {
   SiVuedotjs,
   SiTailwindcss,
   SiIntellijidea,
+  SiClion,
+  SiDatagrip,
   SiPostman,
   SiApachemaven,
+  SiMongodb,
+  SiDbeaver,
 } from "react-icons/si";
 import {
   TbHexagonLetterC,
@@ -131,6 +136,11 @@ export const technologyMap: IconMap = {
       <SiApachemaven />
     </Icon>
   ),
+  MongoDB: (
+    <Icon color="#47A248">
+      <SiMongodb />
+    </Icon>
+  ),
 };
 
 export const toolMap: IconMap = {
@@ -142,6 +152,16 @@ export const toolMap: IconMap = {
   IntelliJ: (
     <Icon>
       <SiIntellijidea />
+    </Icon>
+  ),
+  CLion: (
+    <Icon>
+      <SiClion />
+    </Icon>
+  ),
+  DataGrip: (
+    <Icon>
+      <SiDatagrip />
     </Icon>
   ),
   Postman: (
@@ -182,6 +202,16 @@ export const toolMap: IconMap = {
   Figma: (
     <Icon>
       <FaFigma />
+    </Icon>
+  ),
+  Confluence: (
+    <Icon color="#1D7AFC">
+      <FaConfluence />
+    </Icon>
+  ),
+  DBeaver: (
+    <Icon>
+      <SiDbeaver />
     </Icon>
   ),
 };
